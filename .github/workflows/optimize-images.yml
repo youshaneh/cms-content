@@ -29,3 +29,9 @@ jobs:
           git add .
           git commit -m "optimization"
           git push origin HEAD
+          
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: release
+          folder: content
