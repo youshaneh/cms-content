@@ -20,10 +20,10 @@ jobs:
           git checkout optimize || git checkout -b optimize
           git merge main --strategy-option theirs --allow-unrelated-histories -m "Merge main to optimize"
 
-      # - name: Run optimize-images script
-      #   run: |
-      #     npm install
-      #     npm run optimize-images
+      - name: Run optimize-images script
+        run: |
+          npm install
+          npm run optimize-images
 
       - name: Merge main to optimize
         run: |
