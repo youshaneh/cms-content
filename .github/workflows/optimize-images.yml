@@ -1,0 +1,26 @@
+name: Optimize Images
+on:
+  create
+jobs:
+  optimize-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Merge main to optimize
+        run: |
+          git fetch
+          git checkout main
+          git checkout optimize || git checkout -b optimize
+          git merge main -m "Merge main to optimize"
+
+      - name: Run optimize-images script
+        run: |
+          npm install
+          npm run optimize-images
+
+      - name: Merge main to optimize
+        run: |
+          git add .
+          git commit -m "optimization"
+          git push origin HEAD
