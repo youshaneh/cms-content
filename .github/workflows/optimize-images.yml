@@ -12,7 +12,7 @@ jobs:
           git fetch
           git checkout main
           git checkout optimize || git checkout -b optimize
-          git merge main -m "Merge main to optimize"
+          git merge main --allow-unrelated-histories -m "Merge main to optimize"
 
       - name: Run optimize-images script
         run: |
