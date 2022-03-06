@@ -1,0 +1,23 @@
+{
+  "name": "cms-content",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "optimize-images": "node optimize-images.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youshaneh/cms-content.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/youshaneh/cms-content/issues"
+  },
+  "homepage": "https://github.com/youshaneh/cms-content#readme",
+  "dependencies": {
+    "sharp": "^0.30.2"
+  }
+}
